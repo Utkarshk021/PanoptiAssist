@@ -23,8 +23,15 @@ st.set_page_config(page_title="PanoptiAssist", page_icon=":shield:")
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
-# Sidebar logo removed
-# st.sidebar.image("/Users/khandelwal/Desktop/ProductUnfiltered_LOGO copy.png", use_column_width=True)  # Ensure the path is correct
+hide_st_style = """
+            <style>
+           
+            #GithubIcon { visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 
 st.sidebar.title("Tell us about your interests")
 
